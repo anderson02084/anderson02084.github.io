@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+p {
+    font-size: 30px;
+}
+</style>
+</head>
+<body>
+<div>
+    <form method="get" onsubmit="return false;">
+        <p>代號:</p>
+        <input type="text" id="ID">
+        <input type="submit" value="查詢" onclick="displayProductInfo()">
+    </form>
+</div>
+<div id="productInfo"></div>
+
+<script>
+function displayProductInfo() {
+    const ID = document.getElementById("ID").value;
+    const productInfo = document.getElementById("productInfo");
+
+    switch (ID) {
+        case "68253":
+            productInfo.innerHTML = `
+                <p>品名: 100%蠶絲強捻植絨字母T恤<h1>2件</h1></p>
+                <p>單件: 2270</p>
+                <p>售價: 3860</p>`;
+            break;
+        case "68263":
+            productInfo.innerHTML = `
+                <p>品名: 100%蠶絲強捻膠印Logo上衣-<h1>3件組</h1></p>
+                <p>單件: 2270</p>
+                <p>售價: 5840</p>`;
+            break;
+        case "68263":
+            productInfo.innerHTML = `
+                <p>品名: 100%蠶絲強捻膠印Logo上衣-<h1>3件組</h1></p>
+                <p>單件: 2270</p>
+                <p>售價: 5840</p>`;
+        break;
+        case "68263":
+            productInfo.innerHTML = `
+                <p>品名: 100%蠶絲強捻膠印Logo上衣-<h1>3件組</h1></p>
+                <p>單件: 2270</p>
+                <p>售價: 5840</p>`;
+        break;
+        case "68263":
+            productInfo.innerHTML = `
+                <p>品名: 100%蠶絲強捻膠印Logo上衣-<h1>3件組</h1></p>
+                <p>單件: 2270</p>
+                <p>售價: 5840</p>`;
+        break;
+        case "68263":
+            productInfo.innerHTML = `
+                <p>品名: 100%蠶絲強捻膠印Logo上衣-<h1>3件組</h1></p>
+                <p>單件: 2270</p>
+                <p>售價: 5840</p>`;
+        break;
+        case "68263":
+            productInfo.innerHTML = `
+                <p>品名: 100%蠶絲強捻膠印Logo上衣-<h1>3件組</h1></p>
+                <p>單件: 2270</p>
+                <p>售價: 5840</p>`;
+        break;
+        case "68263":
+            productInfo.innerHTML = `
+                <p>品名: 100%蠶絲強捻膠印Logo上衣-<h1>3件組</h1></p>
+                <p>單件: 2270</p>
+                <p>售價: 5840</p>`;
+        break;
+        case "68263":
+            productInfo.innerHTML = `
+                <p>品名: 100%蠶絲強捻膠印Logo上衣-<h1>3件組</h1></p>
+                <p>單件: 2270</p>
+                <p>售價: 5840</p>`;
+        break;
+        case "68263":
+            productInfo.innerHTML = `
+                <p>品名: 100%蠶絲強捻膠印Logo上衣-<h1>3件組</h1></p>
+                <p>單件: 2270</p>
+                <p>售價: 5840</p>`;
+        break;
+        case "68263":
+            productInfo.innerHTML = `
+                <p>品名: 100%蠶絲強捻膠印Logo上衣-<h1>3件組</h1></p>
+                <p>單件: 2270</p>
+                <p>售價: 5840</p>`;
+        break;
+        case "68263":
+            productInfo.innerHTML = `
+                <p>品名: 100%蠶絲強捻膠印Logo上衣-<h1>3件組</h1></p>
+                <p>單件: 2270</p>
+                <p>售價: 5840</p>`;
+        break;
+        case "68263":
+            productInfo.innerHTML = `
+                <p>品名: 100%蠶絲強捻膠印Logo上衣-<h1>3件組</h1></p>
+                <p>單件: 2270</p>
+                <p>售價: 5840</p>`;
+        break;
+        case "68263":
+            productInfo.innerHTML = `
+                <p>品名: 100%蠶絲強捻膠印Logo上衣-<h1>3件組</h1></p>
+                <p>單件: 2270</p>
+                <p>售價: 5840</p>`;
+        break;
+        case "68263":
+            productInfo.innerHTML = `
+                <p>品名: 100%蠶絲強捻膠印Logo上衣-<h1>3件組</h1></p>
+                <p>單件: 2270</p>
+                <p>售價: 5840</p>`;
+        break;
+        case "68263":
+            productInfo.innerHTML = `
+                <p>品名: 100%蠶絲強捻膠印Logo上衣-<h1>3件組</h1></p>
+                <p>單件: 2270</p>
+                <p>售價: 5840</p>`;
+        break;
+        case "68263":
+            productInfo.innerHTML = `
+                <p>品名: 100%蠶絲強捻膠印Logo上衣-<h1>3件組</h1></p>
+                <p>單件: 2270</p>
+                <p>售價: 5840</p>`;
+        break;
+        case "68263":
+            productInfo.innerHTML = `
+                <p>品名: 100%蠶絲強捻膠印Logo上衣-<h1>3件組</h1></p>
+                <p>單件: 2270</p>
+                <p>售價: 5840</p>`;
+        break;
+        case "68263":
+            productInfo.innerHTML = `
+                <p>品名: 100%蠶絲強捻膠印Logo上衣-<h1>3件組</h1></p>
+                <p>單件: 2270</p>
+                <p>售價: 5840</p>`;
+        break;
+        case "68263":
+            productInfo.innerHTML = `
+                <p>品名: 100%蠶絲強捻膠印Logo上衣-<h1>3件組</h1></p>
+                <p>單件: 2270</p>
+                <p>售價: 5840</p>`;
+        break;
+        case "68263":
+            productInfo.innerHTML = `
+                <p>品名: 100%蠶絲強捻膠印Logo上衣-<h1>3件組</h1></p>
+                <p>單件: 2270</p>
+                <p>售價: 5840</p>`;
+        break;    
+        // Add more cases for other IDs here
+        default:
+            productInfo.innerHTML = "<p>找不到相應的產品信息。</p>";
+            break;
+    }
+}
+</script>
+</body>
+</html>
