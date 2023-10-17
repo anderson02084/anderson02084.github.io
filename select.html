@@ -12,17 +12,26 @@ h1{
 </head>
 <body>
 <div>
-    <form method="get" onsubmit="return false;">
+     <form method="get" onsubmit="return false;">
         <p>代號:</p>
-        <input type="text" style"padding:5px;font-size:30px" id="ID">
-        <input type="submit" value="查詢" onclick="displayProductInfo()">
+        <input type="text" id="textID">
+        <input type="submit" value="查詢" onclick="displayProductInfo('textID')">
+    </form>
+
+    <form method="get" onsubmit="return false;">
+        <select id="selectID">
+            <option value="">選擇代號</option>
+            <option value="68253">68253</option>
+            <option value="68263">68263</option>
+        </select>
+        <input type="submit" value="查詢" onclick="displayProductInfo('selectID')">
     </form>
 </div>
 <div id="productInfo"></div>
 
 <script>
-function displayProductInfo() {
-    const ID = document.getElementById("ID").value;
+function displayProductInfo(inputID) {
+    const ID = document.getElementById(inputID).value;
     const productInfo = document.getElementById("productInfo");
 
     switch (ID) {
