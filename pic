@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    table {
+      border-collapse: collapse;
+      border: 2px solid #000;
+      margin-bottom: 20px;
+    }
+    td {
+      padding: 12px;
+      text-align: center;
+      vertical-align: top;
+    }
+    img {
+      width: 300px;
+      height: 350px;
+      display: block;
+      margin-bottom: 8px;
+    }
+    input[type="text"] {
+      width: calc(100% - 16px);
+      margin-top: 4px;
+      border: none;
+      outline: none;
+      padding: 4px;
+      font-size: 14px;
+    }
+    .file-input {
+      margin-bottom: 10px;
+    }
+    .control-panel {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .control-panel label,
+    .control-panel select {
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="control-panel">
+      <label for="fontSelect">選擇字體：</label>
+      <select id="fontSelect">
+        <option value="Arial">Arial</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Verdana">Verdana</option>
+        <!-- 添加其他字體選項 -->
+      </select>
+
+      <label for="sizeSelect">選擇文字大小：</label>
+      <select id="sizeSelect">
+        <option value="12px">12px</option>
+        <option value="14px">14px</option>
+        <option value="16px">16px</option>
+        <option value="24px">24px</option>
+        <!-- 添加其他文字大小選項 -->
+      </select>
+    </div>
+
+    <div class="file-input">
+      <input type="file" name="file1" accept="image/*">
+      <input type="file" name="file2" accept="image/*">
+      <input type="file" name="file3" accept="image/*">
+      <input type="file" name="file4" accept="image/*">
+    </div>
+    <div style="display: flex; justify-content: center;">
+      <table>
+        <tr>
+          <td>
+            <img id="img1" src="#" alt="圖片1">
+            <input type="text" name="text1_1" placeholder="請輸入文字1"><br>
+            <input type="text" name="text1_2" placeholder="請輸入文字2"><br>
+            <input type="text" name="text1_3" placeholder="請輸入文字3"><br>
+            <input type="text" name="text1_4" placeholder="請輸入文字4">
+          </td>
+          <td>
+            <img id="img2" src="#" alt="圖片2">
+            <input type="text" name="text2_1" placeholder="請輸入文字1"><br>
+            <input type="text" name="text2_2" placeholder="請輸入文字2"><br>
+            <input type="text" name="text2_3" placeholder="請輸入文字3"><br>
+            <input type="text" name="text2_4" placeholder="請輸入文字4">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <img id="img3" src="#" alt="圖片3">
+            <input type="text" name="text3_1" placeholder="請輸入文字1"><br>
+            <input type="text" name="text3_2" placeholder="請輸入文字2"><br>
+            <input type="text" name="text3_3" placeholder="請輸入文字3"><br>
+            <input type="text" name="text3_4" placeholder="請輸入文字4">
+          </td>
+          <td>
+            <img id="img4" src="#" alt="圖片4">
+            <input type="text" name="text4_1" placeholder="請輸入文字1"><br>
+            <input type="text" name="text4_2" placeholder="請輸入文字2"><br>
+            <input type="text" name="text4_3" placeholder="請輸入文字3"><br>
+            <input type="text" name="text4_4" placeholder="請輸入文字4">
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    document.querySelector('input[name="file1"]').addEventListener('change', function() {
+      previewImage(this, 'img1');
+    });
+    document.querySelector('input[name="file2"]').addEventListener('change', function() {
+      previewImage(this, 'img2');
+    });
+    document.querySelector('input[name="file3"]').addEventListener('change', function() {
+      previewImage(this, 'img3');
+    });
+    document.querySelector('input[name="file4"]').addEventListener('change', function() {
+      previewImage(this, 'img4');
+    });
+
+    function previewImage(input, imgId) {
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        var imgElement = document.getElementById(imgId);
+        imgElement.src = e.target.result;
+      };
+      reader.readAsDataURL(input.files[0]);
+    }
+
+    document.getElementById('fontSelect').addEventListener('change', function() {
+      var selectedFont = this.value;
+      var textInputs = document.querySelectorAll('input[type="text"]');
+      textInputs.forEach(function(input) {
+        input.style.fontFamily = selectedFont;
+      });
+    });
+
+    document.getElementById('sizeSelect').addEventListener('change', function() {
+      var selectedSize = this.value;
+      var textInputs = document.querySelectorAll('input[type="text"]');
+      textInputs.forEach(function(input) {
+        input.style.fontSize = selectedSize;
+      });
+    });
+  </script>
+</body>
+</html>
